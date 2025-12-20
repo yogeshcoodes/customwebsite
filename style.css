@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* NAVBAR */
+.nav {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav h2 span {
+  color: green;
+}
+
+.navpart2 {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search input {
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+}
+
+.nav h4 a {
+  text-decoration: none;
+  color: black;
+}
+
+/* HAMBURGER */
+.nav i {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.nav i.open {
+  transform: rotate(90deg);
+}
+
+/* CONTENT */
+.content {
+  display: flex;
+  min-height: calc(100vh - 64px);
+}
+
+.left {
+  width: 50%;
+  padding: 4rem;
+  background: linear-gradient(to right, orange, white);
+}
+
+.left span {
+  color: green;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 10px 22px;
+  border-radius: 22px;
+  background: green;
+  color: wheat;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= MOBILE MENU ANIMATION ================= */
+.mobile-menu {
+  position: fixed;
+  top: 64px;
+  right: 0;
+  width: 100%;
+  background: white;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  transform: translateY(-20px);
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.35s ease;
+  z-index: 999;
+}
+
+.mobile-menu.active {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: black;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+}
+
+.mobile-menu a:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+/* MOBILE ONLY */
+@media (max-width: 768px) {
+
+  .search,
+  .nav h4 {
+    display: none;
+  }
+
+  .nav i {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+  .nav {
+    padding: 0 1.2rem;
+  }
+
+  .h2 {
+    font-size: 1.0rem;
+  }
+
+  .search,
+  .nav h4,
+  .nav h4a {
+    display: none;
+  }
+
+  .nav i {
+    display: block;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    width: 100%;
+  }
+
+  .left {
+    padding: 3rem 1.5rem;
+    text-align: center;
+    height: 100vh;
+  }
+
+  .left p {
+    width: 100%;
+  }
+
+  button {
+    width: 160px;
+    margin: 2rem auto 0;
+  }
+
+  .right img {
+    padding: 1rem;
+  }
+}
+
+/* ================= SMALL PHONES ================= */
+@media (max-width: 420px) {
+
+  .nav h2 {
+    font-size: 1.3rem;
+  }
+
+  .left h1 {
+    font-size: 1.7rem;
+  }
+
+  .left p {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+  }
+}
+
+/* ================= HOVER + SMOOTH ================= */
+h2, h4, h4a, button {
+  transition: all 0.25s ease;
+}
+
+h2:hover {
+  color: rgb(226, 147, 0);
+}
+
+h4:hover {
+  background: rgba(0,0,0,0.08);
+}
+
+h4a:hover {
+  background: yellow;
+}
+
+button:hover {
+  background: rgb(0, 110, 0);
+  transform: scale(1.05);
+}

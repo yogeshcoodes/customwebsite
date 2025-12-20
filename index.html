@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Learnit</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="nav">
+      <h2>Learn<span>it</span></h2>
+
+      <div class="navpart2">
+        <div class="search">
+          <input type="text" placeholder="Search..." />
+        </div>
+
+        <h4><a href="./pages/store.html">Store</a></h4>
+        <h4><a href="./pages/courses.html">Courses</a></h4>
+        <h4><a href="./pages/career.html">Career</a></h4>
+        <h4><a href="#">Blog</a></h4>
+        <h4><a href="./pages/account.html">Account</a></h4>
+
+        <i class="ri-menu-3-fill" id="menuBtn"></i>
+      </div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <h4><a href="./pages/store.html">Store</a></h4>
+        <h4><a href="./pages/courses.html">Courses</a></h4>
+        <h4><a href="./pages/career.html">Career</a></h4>
+        <h4><a href="#">Blog</a></h4>
+        <h4><a href="./pages/account.html">Account</a></h4>
+    </div>
+
+    <div class="content">
+      <div class="left">
+        <h1>Learn From The <span>Coolest</span> Coding Platform Of India.</h1>
+        <p>Learn real skills, build real projects, and grow like a pro developer.</p>
+        <button>Explore Now</button>
+      </div>
+      <div class="right"></div>
+    </div>
+  </div>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+      menuBtn.classList.toggle("open");
+    });
+  </script>
+</body>
+</html>
