@@ -2,32 +2,147 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Courses | Learnit</title>
-  <link rel="stylesheet" href="../css/pages.css" />
+
+  <style>
+    /* ===== RESET ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background: linear-gradient(120deg, #ffb703, #ffd166, #fff1c1);
+      color: #1a1a1a;
+    }
+
+    /* ===== PAGE ===== */
+    .page {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 1.2rem;
+    }
+
+    .page h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+    }
+
+    .page p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      opacity: 0.85;
+      max-width: 760px;
+    }
+
+    /* ===== CARDS GRID ===== */
+    .cards {
+      margin-top: 2.2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+
+    /* ===== CARD ===== */
+    .card {
+      background: rgba(255, 255, 255, 0.55);
+      border-radius: 16px;
+      padding: 1.4rem;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .card span {
+      font-size: 0.88rem;
+      opacity: 0.75;
+    }
+
+    /* ===== HOVER (DESKTOP ONLY) ===== */
+    @media (hover: hover) {
+      .card:hover {
+        transform: translateY(-8px) scale(1.02);
+        background: rgba(255, 255, 255, 0.75);
+      }
+    }
+
+    /* ===== SMALL PHONES ===== */
+    @media (max-width: 360px) {
+      .page {
+        padding: 2rem 1rem;
+      }
+
+      .page h1 {
+        font-size: 1.6rem;
+      }
+
+      .card {
+        padding: 1.2rem;
+      }
+    }
+
+    /* ===== TABLETS ===== */
+    @media (min-width: 600px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* ===== LAPTOPS ===== */
+    @media (min-width: 900px) {
+      .page {
+        padding: 4rem 6%;
+      }
+
+      .cards {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <section class="page">
+    <h1>Our Courses</h1>
+    <p>
+      Industry-ready courses designed for absolute beginners to advanced devs.
+    </p>
 
-<section class="page">
-  <h1>Our Courses</h1>
-  <p>Industry-ready courses designed for absolute beginners to advanced devs.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Web Development</h3>
+        <span>HTML · CSS · JS</span>
+      </div>
 
-  <div class="cards">
-    <div class="card">
-      <h3>Web Development</h3>
-      <span>HTML · CSS · JS</span>
+      <div class="card">
+        <h3>React & Modern JS</h3>
+        <span>Hooks · APIs · Projects</span>
+      </div>
+
+      <div class="card">
+        <h3>Backend Basics</h3>
+        <span>Node · Express · MongoDB</span>
+      </div>
     </div>
-
-    <div class="card">
-      <h3>React & Modern JS</h3>
-      <span>Hooks · APIs · Projects</span>
-    </div>
-
-    <div class="card">
-      <h3>Backend Basics</h3>
-      <span>Node · Express · MongoDB</span>
-    </div>
-  </div>
-</section>
-
+  </section>
 </body>
 </html>
