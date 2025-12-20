@@ -86,7 +86,7 @@ button {
   cursor: pointer;
 }
 
-/* ================= MOBILE MENU ANIMATION ================= */
+/*MOBILE MENU ANIMATION*/
 .mobile-menu {
   position: fixed;
   top: 64px;
@@ -198,7 +198,6 @@ button {
   }
 }
 
-/* ================= SMALL PHONES ================= */
 @media (max-width: 420px) {
   .nav h2 {
     font-size: 1.3rem;
