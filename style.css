@@ -5,7 +5,8 @@
   font-family: "Poppins", sans-serif;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -28,6 +29,12 @@ html, body {
   display: flex;
   align-items: center;
   gap: 1rem;
+}
+
+button,
+h2 {
+  user-select: none;
+  cursor: pointer;
 }
 
 .search input {
@@ -114,12 +121,11 @@ button {
 }
 
 .mobile-menu a:hover {
-  background: rgba(0,0,0,0.08);
+  background: rgba(0, 0, 0, 0.08);
 }
 
 /* MOBILE ONLY */
 @media (max-width: 768px) {
-
   .search,
   .nav h4 {
     display: none;
@@ -141,13 +147,12 @@ button {
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
-
   .nav {
     padding: 0 1.2rem;
   }
 
   .h2 {
-    font-size: 1.0rem;
+    font-size: 1rem;
   }
 
   .search,
@@ -164,14 +169,19 @@ button {
     flex-direction: column;
   }
 
-  .left, .right {
+  .left,
+  .right {
     width: 100%;
   }
 
   .left {
     padding: 3rem 1.5rem;
     text-align: center;
-    height: 100vh;
+    height: 90vh;
+  }
+
+  .right {
+    height: auto;
   }
 
   .left p {
@@ -190,7 +200,6 @@ button {
 
 /* ================= SMALL PHONES ================= */
 @media (max-width: 420px) {
-
   .nav h2 {
     font-size: 1.3rem;
   }
@@ -210,16 +219,15 @@ button {
 }
 
 /* ================= HOVER + SMOOTH ================= */
-h2, h4, h4a, button {
+h2,
+h4,
+h4a,
+button {
   transition: all 0.25s ease;
 }
 
 h2:hover {
   color: rgb(226, 147, 0);
-}
-
-h4:hover {
-  background: rgba(0,0,0,0.08);
 }
 
 h4a:hover {

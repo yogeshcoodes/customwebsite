@@ -52,14 +52,28 @@
     </div>
   </div>
 
-  <script>
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("active");
-      menuBtn.classList.toggle("open");
-    });
-  </script>
+  // toggle on hamburger click
+  menuBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // important
+    mobileMenu.classList.toggle("active");
+    menuBtn.classList.toggle("open");
+  });
+
+  // stop click bubbling from menu
+  mobileMenu.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+
+  // click anywhere outside → close menu
+  document.addEventListener("click", () => {
+    mobileMenu.classList.remove("active");
+    menuBtn.classList.remove("open");
+  });
+</script>
+
 </body>
 </html>
