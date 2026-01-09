@@ -26,13 +26,18 @@ a:active {
   outline: none;
 }
 
-/* SVG focus + active fix */
 svg,
 svg * {
   outline: none;
 }
 
-/* If SVG is inside anchor or button */
+i,
+i:focus,
+i:active {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
 a svg,
 button svg {
   pointer-events: none;
