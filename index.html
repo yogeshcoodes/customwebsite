@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
 
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -36,10 +37,10 @@
     <!-- MOBILE MENU -->
     <div class="mobile-menu" id="mobileMenu">
       <h4><a href="./pages/store.html">Store</a></h4>
-        <h4><a href="./pages/courses.html">Courses</a></h4>
-        <h4><a href="./pages/career.html">Career</a></h4>
-        <h4><a href="./pages/blog.html">Blog</a></h4>
-        <h4><a href="./pages/account.html">Account</a></h4>
+      <h4><a href="./pages/courses.html">Courses</a></h4>
+      <h4><a href="./pages/career.html">Career</a></h4>
+      <h4><a href="./pages/blog.html">Blog</a></h4>
+      <h4><a href="./pages/account.html">Account</a></h4>
     </div>
 
     <div class="content">
@@ -52,28 +53,29 @@
     </div>
   </div>
 
-<script>
-  const menuBtn = document.getElementById("menuBtn");
-  const mobileMenu = document.getElementById("mobileMenu");
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
 
-  // toggle on hamburger click
-  menuBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // important
-    mobileMenu.classList.toggle("active");
-    menuBtn.classList.toggle("open");
-  });
+    // toggle on hamburger click
+    menuBtn.addEventListener("click", (e) => {
+      e.stopPropagation(); // important
+      mobileMenu.classList.toggle("active");
+      menuBtn.classList.toggle("open");
+    });
 
-  // stop click bubbling from menu
-  mobileMenu.addEventListener("click", (e) => {
-    e.stopPropagation();
-  });
+    // stop click bubbling from menu
+    mobileMenu.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
 
-  // click anywhere outside → close menu
-  document.addEventListener("click", () => {
-    mobileMenu.classList.remove("active");
-    menuBtn.classList.remove("open");
-  });
-</script>
+    // click anywhere outside → close menu
+    document.addEventListener("click", () => {
+      mobileMenu.classList.remove("active");
+      menuBtn.classList.remove("open");
+    });
+  </script>
 
 </body>
+
 </html>

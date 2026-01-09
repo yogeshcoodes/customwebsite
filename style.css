@@ -26,6 +26,12 @@ a:active {
   outline: none;
 }
 
+*:focus,
+*:active,
+*:focus-visible {
+  outline: none;
+}
+
 svg,
 svg * {
   outline: none;
