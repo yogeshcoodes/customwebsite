@@ -16,6 +16,8 @@ input,
 textarea,
 button,
 select,
+span,
+h2,
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -147,13 +149,14 @@ h2 {
 /* CONTENT */
 .content {
   display: flex;
-  min-height: calc(100vh - 64px);
+  min-height: calc(100vh - 58px);
 }
 
 .left {
   width: 50%;
   padding: 4rem;
-  background: linear-gradient(to right, orange, white);
+background: linear-gradient(to right, #71ff8e, #ffffff);
+
 }
 
 .left span {
@@ -164,7 +167,7 @@ button {
   margin-top: 2rem;
   padding: 10px 22px;
   border-radius: 22px;
-  background: green;
+  background: rgb(1, 121, 1);
   color: wheat;
   border: none;
   cursor: pointer;
@@ -173,11 +176,13 @@ button {
 /*MOBILE MENU ANIMATION*/
 .mobile-menu {
   position: fixed;
-  top: 64px;
+  top: 58px;
   right: 0;
   width: 100%;
   background: white;
-  padding: 1rem;
+  padding: 1rem;  
+  border-bottom-left-radius: 1.4rem;
+    border-bottom-right-radius: 1.4rem;
 
   display: flex;
   flex-direction: column;
@@ -200,12 +205,17 @@ button {
 .mobile-menu a {
   text-decoration: none;
   color: black;
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 1rem;
 }
 
+.mobile-menu.active h4{
+  border-radius: 1rem;
+}
+
+
 .mobile-menu a:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(0, 0, 0, 0.105);
 }
 
 /* MOBILE ONLY */
@@ -262,7 +272,7 @@ button {
   .left {
     padding: 3rem 1.5rem;
     text-align: left;
-    height: 92vh;
+    height: calc(100vh - 58px);
   }
 
   .right {
